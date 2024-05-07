@@ -1,0 +1,10 @@
+﻿<h2>@Model.CurrentCategory</h2>
+<div class="row">
+    @foreach (Drink drink in Model.Drinks)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            @Html.Partial("DrinkSummary", drink)
+        </div>
+    }
+</div>
+

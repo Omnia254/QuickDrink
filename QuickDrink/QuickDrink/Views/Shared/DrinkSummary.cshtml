@@ -1,0 +1,19 @@
+﻿<div class="col-sm-12 col-lg-12 col-md-12">
+    <div class="card h-100">
+        <img src="@Model.ImageThumbnailUrl" class="card-img-top img-fluid" style="height: 300px; object-fit: cover;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">@Model.ShortDescription</p>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">@Model.Price.ToString("c")</h6>
+                <div class="addToCart">
+                    <a class="btn btn-success" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-drinkId="@Model.DrinkId">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
